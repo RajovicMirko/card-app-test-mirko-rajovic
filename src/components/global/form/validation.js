@@ -8,10 +8,7 @@ export default class FormValidation {
 
   // VALIDATION RULES
   _validationRules = {
-    cardNumber: (val) => {
-      const pattern = /^(4|5|6)$/;
-      return pattern.test(val)
-    },
+    cardNumber: (val) => {},
     exparationDate: (val) => {
       const pattern = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
       return pattern.test(val)

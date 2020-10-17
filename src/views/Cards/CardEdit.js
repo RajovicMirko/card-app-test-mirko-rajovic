@@ -30,20 +30,9 @@ class index extends Component {
         cardType: props.card.cardType
       },
       rules: {
-        fullName: {},
-        cardNumber1: {
-          max: { value: 4, message: 'Maximum 4 number character'}
+        expDate: {
+          exparationDate: { message: 'Wrong date' }
         },
-        cardNumber2: {
-          max: { value: 4, message: 'Maximum 4 number character'}
-        },
-        cardNumber3: {
-          max: { value: 4, message: 'Maximum 4 number character'}
-        },
-        cardNumber4: {
-          max: { value: 4, message: 'Maximum 4 number character'}
-        },
-        expDate: {},
       },
       errors: {}
     }

@@ -10,7 +10,6 @@ import Form from '../../components/global/form'
 import FormValidation from '../../components/global/form/validation'
 import Button from '../../components/global/button'
 import Input from '../../components/global/input'
-import InputCardNumber from '../../components/global/input-card-number'
 import SelectCard from '../../components/global/select-card-type'
 
 // ACTIONS
@@ -30,9 +29,6 @@ class index extends Component {
         cardType: 'visa'
       },
       rules: {
-        cardNumber1: {
-          cardNumber: { message: 'Wrong card number'}
-        },
         expDate: {
           exparationDate: { message: 'Wrong date' }
         },
@@ -121,16 +117,8 @@ class index extends Component {
             />
             
             <SelectCard id="cardType" label="Card type" cardType={inputs.cardType} onChange={this.handleChange} />
-            <InputCardNumber 
-              id="cardNumber"
-              type="text"
-              label="Card number"
-              addClass="mx-1"
-              value={inputs.cardNumber1}
-              error={errors.cardNumber1}
-              onChange={this.handleChange}
-            />
-            {/* <div className="d-flex justify-content-between align-items-end">
+
+            <div className="d-flex justify-content-between align-items-end">
               <Input
                 id="cardNumber1"
                 type="text"
@@ -164,7 +152,7 @@ class index extends Component {
                 error={errors.cardNumber4}
                 onChange={this.handleChange}
               />
-            </div> */}
+            </div>
             
             <Input
               id="expDate"
